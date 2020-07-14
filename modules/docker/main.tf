@@ -19,7 +19,7 @@ resource "docker_image" "rabbitmq" {
 }
 
 resource "docker_container" "rabbitmq" {
-	image = docker_image.rabbitmq.latest
+	image = docker_image.rabbitmq.name
 	name = "rabbitmq-server"
 
     env = [

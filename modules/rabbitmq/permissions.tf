@@ -13,25 +13,12 @@ provider "rabbitmq" {
     insecure = true
 }
 
-resource "rabbitmq_vhost" "vhost_1" {
-	name = "vhost_1"
-}
-
-resource "rabbitmq_permissions" "guest" {
-	user = "guest"
-	vhost = rabbitmq_vhost.vhost_1.name
+resource "rabbitmq_permissions" var.rabbitmq_user {
+	user = var.rabbitmq_user
+	vhost = var.rabbitmq_vhost
 	permissions {
 		configure = ".*"
 		write = ".*"
 		read = ".*"
-	}
-}
-
-resource "rabbitmq_queue" "bmf-queue" {	
-	name = "bmf-queue"
-	vhost = rabbitmq_permissions.guest.vhost
-	settings {
-		durable = false
-		auto_delete = true
 	}
 }

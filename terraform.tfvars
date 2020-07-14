@@ -1,3 +1,2 @@
-RMQ_USR = "guest"
-RMQ_PSW = "guest"
-RMQ_VERSION = "3.8.5"
+rabbitmq_user = "guest"
+rabbitmq_password = "guest"
