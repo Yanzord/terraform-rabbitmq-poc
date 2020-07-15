@@ -9,5 +9,5 @@ module "rabbitmq" {
 	source = "./modules/rabbitmq"
 
 	rabbitmq_user = var.rabbitmq_user
-	rabbitmq_password = var.Rrabbitmq_passwordMQ_PSW
+	rabbitmq_password = var.rabbitmq_password
 }

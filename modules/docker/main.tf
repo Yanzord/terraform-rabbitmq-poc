@@ -1,15 +1,3 @@
-variable rabbitmq_version {
-    default = "3.8.5"
-}
-
-variable rabbitmq_user {
-    default = "guest"
-}
-
-variable rabbitmq_password {
-    default = "guest"
-}
-
 provider "docker" {
     host = "unix:///var/run/docker.sock"
 }
